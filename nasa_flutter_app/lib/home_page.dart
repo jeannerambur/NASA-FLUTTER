@@ -15,12 +15,12 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   late Future<List<Nasa>> nasa;
-  final String url = "https://elements.heroku.com/api/?count=5";
+  final String uri = "http://localhost:3000/api/?count=5";
 
   get key => null;
 
   Future<List<Nasa>> fetchNasa() async {
-     var response = await http.get(Uri.parse(url));
+     var response = await http.get(Uri.parse(uri));
 
      if (response.statusCode == 200) {
        final jsonList = jsonDecode(response.body);
