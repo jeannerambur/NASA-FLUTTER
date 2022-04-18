@@ -15,7 +15,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   late Future<List<Nasa>> nasa;
-  final String uri = "http://localhost:3000/api/?count=5";
+  final String uri = "http://localhost:3000/api/?start_date=2022-01-01&end_date=2022-04-18";
 
   get key => null;
 
