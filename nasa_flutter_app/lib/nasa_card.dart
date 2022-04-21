@@ -15,7 +15,7 @@ class NasaCard extends StatelessWidget {
     return Card(
       elevation: 16.0,
       margin: EdgeInsets.all(12.0),
-      color: Colors.grey,
+      color: Colors.white,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(12.0),
       ),
@@ -44,7 +44,7 @@ class NasaCard extends StatelessWidget {
                     );
                   },
                   borderRadius: BorderRadius.circular(
-                    (12.0),
+                    (0),
                   ),
                   height: 300,
                   width: 400,
@@ -55,10 +55,13 @@ class NasaCard extends StatelessWidget {
               )
             ],
           ),
-          Text(
-            nasa.title,
-            style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
-          )
+          Padding(
+            padding: EdgeInsets.fromLTRB(10, 10, 20, 20), //apply padding to LTRB, L:Left, T:Top, R:Right, B:Bottom
+            child: Text(
+              nasa.title,
+              style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
+            ),
+          ),
         ],
       ),
     );
