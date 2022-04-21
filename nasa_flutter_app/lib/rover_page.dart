@@ -15,7 +15,7 @@ class RoverPage extends StatefulWidget {
 
 class _RoverPageState extends State<RoverPage> {
 
-  Widget ListItem(String img, String camRover) {
+  Widget ListItem(String img, String camRover, int Sol, String EarthDate) {
      return Card(
        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24.0)),
        child: Stack(
@@ -31,13 +31,14 @@ class _RoverPageState extends State<RoverPage> {
              right: 16,
              left: 16,
              child: Text(
-               'camera: $camRover ',
+               'Sol: $Sol \nCamera: $camRover \nEarth date: $EarthDate',
                style: TextStyle(
                  fontWeight: FontWeight.w600,
                  color: Colors.white,
                  fontSize: 24,
                ),
              ),
+
            ),
          ],
        ),
@@ -107,7 +108,7 @@ class _RoverPageState extends State<RoverPage> {
                 child: ListView.builder(
                     itemCount: photos.length,
                     itemBuilder: (BuildContext, int index){
-                      return ListItem(photos_data[index]["img_src"], photos_data[index]["camera"]["name"]);
+                      return ListItem(photos_data[index]["img_src"], photos_data[index]["camera"]["name"], photos_data[index]["sol"], photos_data[index]["earth_date"]);
                     }
                 ),
               ),

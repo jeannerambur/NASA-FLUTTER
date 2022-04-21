@@ -107,6 +107,7 @@ class _NasaAppState extends State<NasaApp> {
       for(int i=0; i< Sol_key.length; i++) {
         weather_data.add(Data[Sol_key[i]]["AT"]);
       }
+      //throw Exception("Http call not made");
     });
   }
 

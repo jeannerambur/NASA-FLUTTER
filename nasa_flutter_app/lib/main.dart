@@ -9,6 +9,7 @@ class Infinity extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'NASA APP',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
           primaryColor: Colors.blue
       ),
