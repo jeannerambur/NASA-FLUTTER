@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:transparent_image/transparent_image.dart';
 import 'model.dart';
 
@@ -41,7 +42,11 @@ class DetailsPage extends StatelessWidget {
             padding: EdgeInsets.fromLTRB(16.0, 16.0, 16.0, 16.0),
             child: Text(
               nasa.description,
-              style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
+              style: GoogleFonts.poppins(
+                color: Colors.black,
+                fontSize: 16,
+              ),
+
             ),
           ),
         ],

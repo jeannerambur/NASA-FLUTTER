@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:http/http.dart' as http;
 import 'package:nasa_flutter_app/weather_mars.dart';
 
@@ -43,19 +44,15 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: const BoxDecoration(
-          image: DecorationImage(
-            fit: BoxFit.cover,
-            image: NetworkImage(
-              'https://cdn.pixabay.com/photo/2016/11/21/12/39/stars-1845140_1280.jpg',
-            ),
-          )),
-        child: Scaffold(
-          backgroundColor: Colors.transparent,
+      child: Scaffold(
+          backgroundColor: Color.fromRGBO(2, 7, 37, 1),
           appBar: AppBar(
             title: Text(
               "Infinity",
-              style: TextStyle(fontSize: 24.0, fontWeight: FontWeight.bold),
+              style: GoogleFonts.poppins(
+                color: Colors.white,
+                fontSize: 24.0,
+              ),
             ),
             elevation: 16.0,
             centerTitle: true,
@@ -73,7 +70,7 @@ class _HomePageState extends State<HomePage> {
             builder: (BuildContext context, AsyncSnapshot<List<Nasa>> snapshot){
               if(snapshot.hasData) {
                 return ListView(
-                  padding: EdgeInsets.all(16.0),
+                  padding: EdgeInsets.all(20.0),
                   children: snapshot.data!.map((nasa) => NasaCard(nasa: nasa, key: key,)).toList(),
                 );
               }

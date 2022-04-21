@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:http/http.dart' as http;
 import 'dart:async';
 import 'dart:convert';
@@ -117,10 +118,14 @@ class _NasaAppState extends State<NasaApp> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color.fromRGBO(2, 7, 37, 1),
       appBar: AppBar(
         title: Text(
           "March Weather",
-          style: TextStyle(fontSize: 24.0, fontWeight: FontWeight.bold),
+          style: GoogleFonts.poppins(
+            color: Colors.white,
+            fontSize: 24.0,
+          ),
         ),
         elevation: 16.0,
         centerTitle: true,
@@ -128,14 +133,6 @@ class _NasaAppState extends State<NasaApp> {
       ),
       body: Container(
         width: double.infinity,
-        decoration: BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage("../_assets/mars_bg.jpg"),
-            fit: BoxFit.cover,
-            alignment: Alignment.center,
-            colorFilter: ColorFilter.mode(Colors.black54, BlendMode.darken),
-          ),
-        ),
         child: Padding(
           padding: EdgeInsets.only(top: 50, bottom: 15, left: 15, right: 15),
           child: Column(

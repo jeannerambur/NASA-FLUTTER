@@ -10,7 +10,7 @@ class WelcomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFFEDECF2),
+      backgroundColor: Color.fromRGBO(2, 7, 37, 1),
       body: SingleChildScrollView(
         child: Container(
           margin: EdgeInsets.symmetric(
@@ -22,22 +22,19 @@ class WelcomePage extends StatelessWidget {
               DelayedAnimation(
                 delay: 1500,
                 child: Container(
-                  height: 170,
-                  child: Image.asset('../_assets/nasa.jpg'),
-                ),
-              ),
-              DelayedAnimation(
-                delay: 2500,
-                child: Container(
-                  height: 400,
-                  child: Image.asset('../_assets/sky.jpg'),
-                ),
-              ),
-              DelayedAnimation(
-                delay: 3500,
-                child: Container(
                   margin: EdgeInsets.only(
                     top: 30,
+                    bottom: 20,
+                  ),
+                  height: 300,
+                  child: Image.asset('../_assets/planet.jpg'),
+                ),
+              ),
+              DelayedAnimation(
+                delay: 2000,
+                child: Container(
+                  margin: EdgeInsets.only(
+                    top: 300,
                     bottom: 20,
                   ),
                   child: Text(
@@ -51,13 +48,14 @@ class WelcomePage extends StatelessWidget {
                 ),
               ),
               DelayedAnimation(
-                delay: 4500,
+                delay: 2500,
                 child: Container(
                   width: double.infinity,
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
+                        primary: Color.fromRGBO(166, 56, 56, 1),
                         shape: StadiumBorder(),
-                        padding: EdgeInsets.all(13)),
+                        padding: EdgeInsets.all(20)),
                     child: Text('GET STARTED'),
                     onPressed: () {
                       Navigator.push(

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nasa_flutter_app/rover_page.dart';
 import 'package:nasa_flutter_app/weather_mars.dart';
 
 import 'home_page.dart';
@@ -17,6 +18,7 @@ class _MyHomePageState extends State<MyHomePage> {
   final screen = [
     HomePage(),
     NasaApp(),
+    RoverPage(),
   ];
 
   @override
@@ -31,12 +33,17 @@ class _MyHomePageState extends State<MyHomePage> {
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
             label: 'Home',
-            backgroundColor: Colors.blue,
+            backgroundColor: Color.fromRGBO(166, 56, 56, 1),
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.favorite),
-            label: 'Feed',
-            backgroundColor: Colors.blue,
+            icon: Icon(Icons.cloud),
+            label: 'Weather',
+            backgroundColor: Color.fromRGBO(166, 56, 56, 1),
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.camera),
+            label: 'Rover',
+            backgroundColor: Color.fromRGBO(166, 56, 56, 1),
           ),
         ],
       ),
