@@ -25,4 +25,5 @@ L'API utilisée est la suivante :
 Pour tester l'API localement, clonez le référentiel, installez les dépendances à l'aide `npm install`. Ensuite, exécutez l'API à l'aide de `node index.js`. L'API s'exécutera sur `localhost:3000`.
 
 <br>
+
 Le git à cloner pour l'api est [apod_api](https://github.com/PawelPleskaczynski/apod_api).
